@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: 'Muli', sans-serif;
+    font-weight: bold;
+}
+
+/* burger menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-content: flex-start;
+  justify-content: space-around;
+}
+
+.menucontent {
+  overflow: hidden;
+  display: none;
+}
+
+.menucontent a {
+  float: right;
+  color: #e7e7e7;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.togbur {
+    float: left;
+    margin-left: 1vw;
+    margin-top: 1vh;
+}
+
+/* body */
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    
+    width: 100vw;
+    height: 100vh;
+    /* background-color: rgb(112, 245, 134); */
+
+    /* tło gradientowe body */
+    background: linear-gradient(-45deg, #360800, #2c2c2c, #751901, #312724);
+	  background-size: 400% 400%;
+	  animation: gradient 20s ease infinite;
+}
+  
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+/* game content options */
+div.container {
+	position: static;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+	
+}
+.container {
+    width: 800px;
+    height: 240px;
+    max-width: 80%;
+    background-color: white;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 2px;
+    
+  }
+  
+  .btn-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .btn {
+    background-color: hsl(0, 96%, 21%);
+    border: 1px solid hsl(294, 100%, 96%);
+    border-radius: 5px;
+    padding:15px 10px;
+    margin-top: 30px;
+    color: rgb(255, 255, 255);
+    outline: none;
+    cursor: help;
+  }
+  
+  .btn:hover {
+    border-color: rgb(0, 0, 0);
+  }
+
+  @media (max-width: 800px) {
+    .menucontent{
+      display: block;
+    }
+
+    .btn-grid{
+      margin-top: 5px;
+    }
+
+    .container{
+      height: auto;
+    }
+  }
+
